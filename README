@@ -1,7 +1,26 @@
 # accessing mysql server from EC2 instance
-
 mysql -h myinstance.123456789012.us-east-1.rds.amazonaws.com -P 3306 -u joinedapp -p
-
 (http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.html)
+
+# Node.js App Server Layer Reference
+(http://docs.aws.amazon.com/opsworks/latest/userguide/layers-server-nodejs.html)
+
+# AWS OpsWorks -- An integrated DevOps application management solution
+(http://docs.aws.amazon.com/opsworks/latest/userguide/welcome.html)i
+
+# copy from EC2 to S3 bucket
+s3cmd put index.html s3://joinedapp.com/index.html
+
+# s3 buckets where webserver files are:
+joinedapp.com, www.joinedapp.com
+
+# appserver on github:
+https://github.com/joinedapp/appserver
+
+#dotfiles for ec2 instance on github:
+https://github.com/joinedapp/dotfiles
+
+#setup files for ec2 instance on github:
+https://github.com/joinedapp/setup
 
 
