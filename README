@@ -1,8 +1,11 @@
 # remote copy to EC2 instance
 scp -i .ssh/arashjoinedappcom.pem /cygdrive/c/Users/arash/Downloads/*jpg ubuntu@ec2-54-201-19-125.us-west-2.compute.amazonaws.com:~/
 
-# post command using curl:
-curl --data "email=nogolrh@yahoo.com&password=..." http://ec2-54-201-19-125.us-west-2.compute.amazonaws.com:8080/user
+# post, put, ... commands using curl:
+curl -X POST --data "email=nogolrh@yahoo.com&password=ansexual2" http://ec2-54-201-19-125.us-west-2.compute.amazonaws.com:8080/user
+curl -X PUT --data "email=nogolrh@yahoo.com&password=ansexual2" http://ec2-54-201-19-125.us-west-2.compute.amazonaws.com:8080/user
+curl -X DELETE --data "email=nogolrh@yahoo.com" http://ec2-54-201-19-125.us-west-2.compute.amazonaws.com:8080/user
+(http://superuser.com/questions/149329/what-is-the-curl-command-line-syntax-to-do-a-post-request)
 
 # access to website (on port 8080)
 ec2-54-201-19-125.us-west-2.compute.amazonaws.com:8080
