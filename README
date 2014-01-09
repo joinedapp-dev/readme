@@ -1,6 +1,18 @@
+# remote copy to EC2 instance
+scp -i .ssh/arashjoinedappcom.pem /cygdrive/c/Users/arash/Downloads/*jpg ubuntu@ec2-54-201-19-125.us-west-2.compute.amazonaws.com:~/
+
+# post command using curl:
+curl --data "email=nogolrh@yahoo.com&password=..." http://ec2-54-201-19-125.us-west-2.compute.amazonaws.com:8080/user
+
+# access to website (on port 8080)
+ec2-54-201-19-125.us-west-2.compute.amazonaws.com:8080
+
 # accessing mysql server from EC2 instance
 mysql -h testdbinstance.cyjcrdkuv9ls.us-west-2.rds.amazonaws.com  -P 3306 -u joinedapp -p
 (http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.html)
+
+# to set env variable for REST service to be able to commect to mysql database:
+export DATABASE_URL='mysql://joinedapp:2opt-------@testdbinstance.cyjcrdkuv9ls.us-west-2.rds.amazonaws.com:3306/testdb'
 
 # Node.js App Server Layer Reference
 (http://docs.aws.amazon.com/opsworks/latest/userguide/layers-server-nodejs.html)
